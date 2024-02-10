@@ -15,12 +15,15 @@ const testCases = [
   { a: 8, b: 2, action: Action.Divide, expected: 4 },
   { a: 3, b: 3, action: Action.Exponentiate, expected: 27 },
   { a: 4, b: 4, action: Action.Exponentiate, expected: 256 },
-  { a: 5, b: 7, action: '%' , expected: null },
-  { a: 'one', b: 'four', action: Action.Exponentiate , expected: null },
+  { a: 5, b: 7, action: '%', expected: null },
+  { a: 'one', b: 'four', action: Action.Exponentiate, expected: null },
 ];
 
 describe('simpleCalculator', () => {
-  test.each(testCases)('Should calculate $a $action $b, is expected $expected ', ({ expected, ...mockRawInput }) => {
-    expect(simpleCalculator(mockRawInput)).toEqual(expected);
-  });
+  test.each(testCases)(
+    'Should calculate $a $action $b, is expected $expected ',
+    ({ expected, ...mockRawInput }) => {
+      expect(simpleCalculator(mockRawInput)).toEqual(expected);
+    },
+  );
 });
