@@ -1,4 +1,4 @@
-import {  simpleCalculator, Action } from './index';
+import { simpleCalculator, Action } from './index';
 
 const testCases = [
   { a: 1, b: 2, action: Action.Add, expected: 3 },
@@ -17,7 +17,6 @@ const testCases = [
   { a: 5, b: 7, action: '%', expected: null },
   { a: 'one', b: 'four', action: Action.Divide, expected: null },
 ];
-
 
 describe('simpleCalculator', () => {
   test.each(testCases)(
